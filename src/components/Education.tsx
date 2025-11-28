@@ -8,7 +8,7 @@ const Education: React.FC = () => {
       degree: 'Master of Computer Applications (MCA)',
       institution: 'Pranveer Singh Institute of Technology, Kanpur',
       duration: '2024 – 2026',
-      grade: 'SGPA 8.39',
+      grade: 'SGPA 7.07',
       status: 'Current',
       description: 'Specializing in advanced computer applications, software development, and emerging technologies.'
     },
@@ -16,25 +16,25 @@ const Education: React.FC = () => {
       degree: 'Bachelor of Computer Applications (BCA)',
       institution: 'Maharana Pratap College of Professional Studies, Kanpur',
       duration: '2021 – 2024',
-      grade: 'CGPA 8.01',
+      grade: 'CGPA 7.79',
       status: 'Completed',
       description: 'Comprehensive study of computer applications, programming languages, and database management systems.'
     },
     {
       degree:'XII th',
-      institution: 'RPS Inter College,Rasulabad Kanpur Dehat',
+      institution: 'R P inter College Kamalganj,farrukhabad',
       duration: 'Apr 2020 - Apr 2021',
-      grade: 'Percentage 82.20%',
+      grade: 'Percentage 73.00%',
       status: 'Completed',
-      description: 'i have completed my class 12-high school education at RPS Inter College Rasulabad where I studied Science.'
+      description: 'i have completed my class 12-high school education at R P inter College Kamalganj,farrukhabad where I studied Science.'
     },
     {
       degree: 'X th',
-      institution:'RPS Inter College Rasulabad Kanpur Dehat',
-      durataion: 'Apr 2017 - Apr 2018',
-      grade: 'Percentage 79.83%',
+      institution:'R P inter College Kamalganj,farrukhabad',
+      durataion: 'Apr 2018 - Apr 2019',
+      grade: 'Percentage 71.66%',
       status:'Completed',
-      description:'I have completed my 10 education at JNVM IC vikas nagar kanpur, where i studied Science with English.'
+      description:'I have completed my 10 education at R P inter College Kamalganj,farrukhabad, where i studied Science with English.'
     }
   ];
 
@@ -139,13 +139,13 @@ const Education: React.FC = () => {
             {[
               { 
                 title: 'Current SGPA', 
-                value: '8.39', 
+                value: '7.07', 
                 description: 'MCA Program Performance',
                 color: 'from-green-400 to-blue-500'
               },
               { 
                 title: 'Overall CGPA', 
-                value: '8.01', 
+                value: '7.79', 
                 description: 'BCA Program Completion',
                 color: 'from-purple-400 to-pink-500'
               },

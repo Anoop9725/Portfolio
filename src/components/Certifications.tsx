@@ -13,18 +13,18 @@ const Certifications: React.FC = () => {
       skills: ['Python Programming', 'Data Structures', 'Algorithms', 'Problem Solving'],
       logo: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=100',
       color: 'from-blue-500 to-green-500',
-      link: 'https://coursera.org/share/d56bfcf603951a2196a8dd5c59387e99' // 🔗 Add your real link here
+      link: 'https://www.coursera.org/account/accomplishments/verify/0IQ0T7QLA38H' // 🔗 Add your real link here
     },
     {
-      title: 'Learn Java Programming',
-      provider: 'Udemy',
-      date: '2023',
+      title: 'Generative AI',
+      provider: 'Microsoft and linkedIn',
+      date: '2024',
       description:
-        'Complete Java programming course from basics to advanced topics including OOP principles and frameworks.',
-      skills: ['Java Programming', 'Object-Oriented Programming', 'Collections', 'Exception Handling'],
-      logo: 'https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=100',
+        'Completed the Generative AI certification by Microsoft and LinkedIn, gaining skills in prompt engineering, large language models, and responsible AI.',
+      skills: ['Generative AI', 'AI Fundamentals', 'Responsible AI', 'AI Content Generation'],
+      logo: 'https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=10',
       color: 'from-orange-500 to-red-500',
-      link: 'https://www.udemy.com/certificate/UC-e1772ee8-6eec-41ae-b7b5-069263bf30c7/'
+      link: 'https://www.linkedin.com/learning/certificates/4216490e9117ab749711182398318c92614b82fd51fbdb5fdde5e5bf8ab6946b?trk=share_certificate'
  // 🔗 Add your real link here
     }
   ];

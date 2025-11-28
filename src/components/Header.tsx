@@ -57,7 +57,7 @@ const Header: React.FC = () => {
             className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            Ankit Rajput
+            Anoop Kumar Pal
           </motion.div>
 
           {/* Desktop Navigation */}

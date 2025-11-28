@@ -73,19 +73,19 @@ const Contact: React.FC = () => {
     {
       icon: FiLinkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/ankit-rajput-559857291/',
+      href: 'https://www.linkedin.com/in/anoop97/',
       color: 'hover:text-blue-600'
     },
     {
       icon: FiGithub,
       label: 'GitHub',
-      href: 'https://github.com/ankit6392-git',
+      href: 'https://github.com/Anoop9725',
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       icon: FiMail,
       label: 'Email',
-      href: 'mailto:ankitrajput88073@gmail.com',
+      href: 'mailto:akpal972563@gmail.com',
       color: 'hover:text-red-600'
     }
   ];

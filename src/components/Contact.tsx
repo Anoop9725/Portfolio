@@ -49,15 +49,15 @@ const Contact: React.FC = () => {
     {
       icon: FiMail,
       label: 'Email',
-      value: 'ankitrajput88073@egmail.com',
-      href: 'mailto:ankit.rajput88073@gmail.com',
+      value: 'akpal972563@gmail.com',
+      href: 'mailto:akpal972563@gmail.com',
       color: 'from-red-500 to-pink-500'
     },
     {
       icon: FiPhone,
       label: 'Phone',
-      value: '+91 6392669268',
-      href: 'tel:+916392669268',
+      value: '+91 9725635087',
+      href: 'tel:+919725635087',
       color: 'from-green-500 to-teal-500'
     },
     {

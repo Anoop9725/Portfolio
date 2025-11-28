@@ -19,17 +19,17 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       icon: FiLinkedin,
-      href: 'https://www.linkedin.com/in/ankit-rajput-559857291/',
+      href: 'https://www.linkedin.com/in/anoop97/',
       label: 'LinkedIn'
     },
     {
       icon: FiGithub,
-      href: 'https://github.com/ankit6392-git',
+      href: 'https://github.com/Anoop9725',
       label: 'GitHub'
     },
     {
       icon: FiMail,
-      href: 'mailto:ankitrajput88073@gmail.com',
+      href: 'mailto:akpal972563@gmail.com',
       label: 'Email'
     }
   ];
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
-                Ankit Rajput
+                Anoop Kumar Pal
               </h3>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
                 MCA student and aspiring IT professional passionate about creating innovative solutions 
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
               <div className="space-y-2 text-gray-300">
                 <p>Kanpur, Uttar Pradesh</p>
                 <p>India</p>
-                <p className="text-blue-400">ankitrajput88073@gmail.com</p>
+                <p className="text-blue-400">akpal972563@gmail.com</p>
               </div>
             </motion.div>
           </div>
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              © {currentYear} Ankit Rajput. Made with{' '}
+              © {currentYear} Anoop Kumar Pal. Made with{' '}
               <FiHeart className="w-4 h-4 mx-1 text-red-500" />
               using React & Framer Motion
             </motion.p>

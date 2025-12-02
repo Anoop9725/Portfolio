@@ -1,4 +1,4 @@
-# 🌐 Ankit Rajput – Personal Portfolio
+# 🌐 Anoop Kumar Pal – Personal Portfolio
 
 A modern, fully responsive personal portfolio website built with **React.js**, **TailwindCSS**, and **Framer Motion**.  
 This portfolio showcases my **skills, education, projects, certifications, and extracurricular activities** while highlighting my journey as an aspiring IT professional.
@@ -63,10 +63,10 @@ Clone this repository and install dependencies:
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/AnkitRajput-Portfolio.git
+git clone https://github.com/yourusername/AnoopkumarPal-Portfolio.git
 
 # Navigate to project folder
-cd AnkitRajput-Portfolio
+cd AnoopKumarPal-Portfolio
 
 # Install dependencies
 npm install

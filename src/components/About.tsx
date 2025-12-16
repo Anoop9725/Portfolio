@@ -40,7 +40,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="w-full max-w-md mx-auto aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl p-1">
                 <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-2xl flex items-center justify-center">
-                  <span className="text-6xl font-bold text-gray-600 dark:text-gray-300">AR</span>
+                  <span className="text-6xl font-bold text-gray-600 dark:text-gray-300">anoop</span>
                 </div>
               </div>
               

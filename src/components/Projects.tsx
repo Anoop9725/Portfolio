@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiCalendar, FiCode } from 'react-icons/fi';
 
 const Projects = () => {
-  const projects = [
+  const projects = [ 
     {
       title: 'Free Fire Tournament Website',
       description:

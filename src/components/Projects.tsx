@@ -230,7 +230,7 @@ const Projects = () => {
           <p className="text-gray-600 dark:text-gray-300 mb-4">Want to see more of my work?</p>
 
           <motion.a
-            href="https://github.com/ankit6392-git"
+            href="https://github.com/Anoop9725"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-lg hover:shadow-lg transition-all duration-300"

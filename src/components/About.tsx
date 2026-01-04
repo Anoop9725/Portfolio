@@ -29,12 +29,7 @@ const About: React.FC = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {<div className="flex flex-col items-center gap-4">
-             <img
-               src="/profile.png"
-               alt="Anoop"
-               className="w-24 h-24 rounded-full object-cover shadow-lg"
-              />}
+          {/* Profile Image}
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -50 }}

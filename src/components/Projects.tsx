@@ -18,13 +18,13 @@ const Projects = () => {
         'Player information & match details',
         'Fast loading and optimized performance'
       ],
-      link: 'https://free-fire-tournament-two.vercel.app/',
-      repo: 'https://github.com/ankit6392-git/Free_Fire_Tournament',
+      link: 'https://free-fire-tournament-registration-w.vercel.app/',
+      repo: 'https://github.com/Anoop9725/Free-Fire-tournament-registration-website',
       image: "/freefire.jpg"
 
     },
     {
-      title: 'Emma – Web-Based Virtual Assistant',
+      title: 'Radhe – Web-Based Virtual Assistant',
       description:
         'An intelligent web-based virtual assistant built with modern web technologies, featuring voice recognition, natural language processing, and interactive responses.',
       techStack: ['HTML5', 'CSS3', 'JavaScript', 'Web APIs', 'Speech Recognition'],
@@ -35,8 +35,8 @@ const Projects = () => {
         'Real-time responses',
         'Modern design patterns'
       ],
-      link: 'https://virtual-assistant2.netlify.app/',
-      repo: 'https://github.com/ankit6392-git/web-based-virtual-assistant',
+      link: 'https://radhe-a-web-based-virtual-assistant.vercel.app/',
+      repo: 'https://github.com/Anoop9725/Radhe-A-Web-Based-Virtual-Assistant',
       image:
         'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800'
     },

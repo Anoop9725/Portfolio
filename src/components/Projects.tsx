@@ -72,7 +72,7 @@ const Projects = () => {
       date: '2023',
       features: ['Mobile-first approach', 'Animated hamburger menu', 'Cross-browser compatibility', 'SEO optimized'],
       link: 'https://fully-responsive-website-three.vercel.app/',
-      repo: 'https://github.com/Anoop9725/Project2--Rock-Paper-Scissors',
+      repo: 'https://github.com/Anoop9725/Fully-Responsive-Website',
       image:
         'https://images.pexels.com/photos/326513/pexels-photo-326513.jpeg?auto=compress&cs=tinysrgb&w=800'
     }

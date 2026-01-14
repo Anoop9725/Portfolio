@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
 
     try {
       // Replace this with your deployed Google Apps Script URL
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxo7JkYHK3VviW27qoxPR0HALnsUOWLqc2tdNiFiIpp5Jj_i2EtVK29XGJKM8Q2AFeJ/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzfRyP4p-LA_Houp_gpusegxLDFW9Xen2U4MaDpmvCPd4ZfZhOUQSN9R9wO-ZTOHIvN/exec";
 
       // Convert form data to URLSearchParams (Google Apps Script friendly)
       const formBody = new URLSearchParams();

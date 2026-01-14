@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
       try {
     const response = await fetch(
       //"https://script.google.com/macros/s/AKfycbzWCXL04mR9kWgE36tOVk0tHRIkXcvm38OAT_D_pujpDnTL7oqbehk5e7F5GLijGYhr/exec", // ← your Google Script URL here
-     " https://script.google.com/macros/s/AKfycbwUlUwTjMmDyp5kkwQgD7cslfMyXI3j9aK0nWbmO8m2rgVFRYDdi31wXarrc-wrMszk/exec",
+     " https://script.google.com/macros/s/AKfycbzOk9qCycm7WVT6LBudUF5wruzkDTLoGYl0Ym_eUW2tHV_m9vKX7v1eBgDAThLs6-3R/exec",
       {
         method: "POST",
         mode: "no-cors",
@@ -50,15 +50,15 @@ const Contact: React.FC = () => {
     {
       icon: FiMail,
       label: 'Email',
-      value: 'ankitrajput88073@egmail.com',
-      href: 'mailto:ankit.rajput88073@gmail.com',
+      value: 'akpal972563.@egmail.com',
+      href: 'mailto:akpal972563@gmail.com',
       color: 'from-red-500 to-pink-500'
     },
     {
       icon: FiPhone,
       label: 'Phone',
-      value: '+91 6392669268',
-      href: 'tel:+916392669268',
+      value: '+91 9725635087',
+      href: 'tel:+91 9725635087',
       color: 'from-green-500 to-teal-500'
     },
     {
@@ -74,19 +74,19 @@ const Contact: React.FC = () => {
     {
       icon: FiLinkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/ankit-rajput-559857291/',
+      href: 'https://www.linkedin.com/in/anoop97/',
       color: 'hover:text-blue-600'
     },
     {
       icon: FiGithub,
       label: 'GitHub',
-      href: 'https://github.com/ankit6392-git',
+      href: 'https://github.com/Anoop9725',
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       icon: FiMail,
       label: 'Email',
-      href: 'mailto:ankitrajput88073@gmail.com',
+      href: 'mailto:akpal972563@gmail.com',
       color: 'hover:text-red-600'
     }
   ];

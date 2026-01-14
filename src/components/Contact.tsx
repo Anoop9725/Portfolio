@@ -6,28 +6,33 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Handle input change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Replace this URL with your deployed Google Apps Script URL
+      // Replace this with your deployed Google Apps Script URL
       const scriptURL = "https://script.google.com/macros/s/AKfycbxo7JkYHK3VviW27qoxPR0HALnsUOWLqc2tdNiFiIpp5Jj_i2EtVK29XGJKM8Q2AFeJ/exec";
 
-      await fetch(scriptURL, {
+      // Convert form data to URLSearchParams (Google Apps Script friendly)
+      const formBody = new URLSearchParams();
+      Object.entries(formData).forEach(([key, value]) => formBody.append(key, value));
+
+      const response = await fetch(scriptURL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: formBody,
       });
+
+      if (!response.ok) throw new Error("Network response was not ok");
 
       setIsSubmitting(false);
       alert("✅ Thank you! Your message has been sent. I will get back to you soon.");
-
-      // Reset form
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -187,31 +192,4 @@ const Contact: React.FC = () => {
 
               {/* Social Links */}
               <div className="mt-6 flex space-x-4">
-                {socialLinks.map((social, i) => (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg text-gray-600 dark:text-gray-400 ${social.color} transition-all duration-300`}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    title={social.label}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Contact;
+                {s

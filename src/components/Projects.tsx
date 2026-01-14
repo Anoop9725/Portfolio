@@ -27,8 +27,8 @@ const Projects: React.FC = () => {
         "Player information section",
         "Fast loading performance",
       ],
-      link: "",
-      repo: "",
+      link: "https://free-fire-tournament-registration-w.vercel.app/",
+      repo: "https://github.com/Anoop9725/Free-Fire-tournament-registration-website",
       image: "/freefire.jpg",
     },
     {
@@ -43,8 +43,8 @@ const Projects: React.FC = () => {
         "Real-time responses",
         "Modern design patterns",
       ],
-      link: "",
-      repo: "",
+      link: "https://radhe-a-web-based-virtual-assistant.vercel.app/",
+      repo: "https://github.com/Anoop9725/Radhe-A-Web-Based-Virtual-Assistant",
       image:
         "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
     },
@@ -61,7 +61,7 @@ const Projects: React.FC = () => {
         "Interactive gameplay",
       ],
       link: "",
-      repo: "",
+      repo: "https://github.com/Anoop9725/Project2--Rock-Paper-Scissors",
       image:
         "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg",
     },
@@ -94,8 +94,8 @@ const Projects: React.FC = () => {
         "Cross-browser compatibility",
         "SEO friendly structure",
       ],
-      link: "",
-      repo: "",
+      link: "https://fully-responsive-website-three.vercel.app/",
+      repo: "https://github.com/Anoop9725/Fully-Responsive-Website",
       image:
         "https://images.pexels.com/photos/326513/pexels-photo-326513.jpeg",
     },

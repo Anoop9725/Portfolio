@@ -198,7 +198,7 @@ const Projects: React.FC = () => {
                     "
                   >
                     <FiGithub />
-                    Code
+                    View Code
                   </a>
 
                   {/* Demo Button – Secondary */}
@@ -216,7 +216,7 @@ const Projects: React.FC = () => {
                     "
                   >
                     <FiExternalLink />
-                    Demo
+                    Live Demo
                   </a>
                 </div>
               </div>

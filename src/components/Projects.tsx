@@ -127,7 +127,7 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700"
+              className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -147,7 +147,7 @@ const Projects: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {project.title}
                   </h3>
-                  <span className="flex items-center text-sm text-gray-500">
+                  <span className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                     <FiCalendar className="mr-1" />
                     {project.date}
                   </span>
@@ -166,7 +166,7 @@ const Projects: React.FC = () => {
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-sm rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200"
+                        className="px-3 py-1 text-xs rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300"
                       >
                         {tech}
                       </span>
@@ -175,29 +175,48 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Features */}
-                <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300 mb-5">
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300 mb-6">
                   {project.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}
                 </ul>
 
-                {/* Actions */}
+                {/* Buttons */}
                 <div className="flex gap-3">
+                  {/* Code Button – Primary */}
                   <a
                     href={hasUrl(project.repo) ? project.repo : "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm"
+                    className="
+                      flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+                      bg-gray-900 text-white
+                      hover:bg-gray-800
+                      dark:bg-gradient-to-r dark:from-blue-600 dark:to-purple-600
+                      dark:hover:from-blue-500 dark:hover:to-purple-500
+                      transition-all duration-300 shadow-md hover:shadow-lg
+                    "
                   >
-                    <FiGithub /> Code
+                    <FiGithub />
+                    Code
                   </a>
+
+                  {/* Demo Button – Secondary */}
                   <a
                     href={hasUrl(project.link) ? project.link : "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-sm"
+                    className="
+                      flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+                      border border-gray-300 text-gray-800
+                      hover:bg-gray-100
+                      dark:border-blue-500 dark:text-blue-400
+                      dark:hover:bg-blue-500/10
+                      transition-all duration-300 shadow-sm hover:shadow-md
+                    "
                   >
-                    <FiExternalLink /> Demo
+                    <FiExternalLink />
+                    Demo
                   </a>
                 </div>
               </div>

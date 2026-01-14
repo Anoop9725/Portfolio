@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
     // Simulate form submission
       try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzWCXL04mR9kWgE36tOVk0tHRIkXcvm38OAT_D_pujpDnTL7oqbehk5e7F5GLijGYhr/exec", // ← your Google Script URL here
+      "https://script.google.com/macros/s/AKfycbzoFS2Vr6KexeRk5zPGMKqBYEr3cbLE1YLZDBe-p4ntoiEgO6WpLL_fTp9_c9dj5TY6/exec", // ← your Google Script URL here
       {
         method: "POST",
         mode: "no-cors",

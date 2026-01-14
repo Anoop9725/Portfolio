@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  FiMail,
-  FiPhone,
-  FiMapPin,
-  FiLinkedin,
-  FiGithub,
-  FiSend,
-  FiUser,
-  FiMessageSquare,
-} from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiSend, FiUser, FiMessageSquare } from "react-icons/fi";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -24,28 +15,24 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwFRmZMB--EWJKfNeKyl7i_ctxhHIkXLb6_3iNzHExajA_ogQlG3v8V8qGvAMbrqlCR/exec", // ← replace with your Web App URL
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      // Replace this URL with your deployed Google Apps Script URL
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxo7JkYHK3VviW27qoxPR0HALnsUOWLqc2tdNiFiIpp5Jj_i2EtVK29XGJKM8Q2AFeJ/exec";
 
-      const result = await response.json();
+      await fetch(scriptURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      if (result.status === "success") {
-        alert("✅ Message sent successfully! Auto-reply has been sent to your email.");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        alert("❌ Error: " + result.message);
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("❌ Failed to send message. Please try again later.");
-    } finally {
       setIsSubmitting(false);
+      alert("✅ Thank you! Your message has been sent. I will get back to you soon.");
+
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setIsSubmitting(false);
+      alert("❌ Oops! Something went wrong. Please try again later.");
     }
   };
 
@@ -72,12 +59,9 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Get In Touch
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-           I'm eager to connect and learn from new opportunities, explore collaborations, 
-           or just have a friendly chat about technology and innovation.
+            I'm a fresher eager to learn, explore new opportunities, collaborate, or just have a friendly chat about technology.
           </p>
         </motion.div>
 
@@ -153,7 +137,7 @@ const Contact: React.FC = () => {
                 ></textarea>
               </div>
 
-              {/* Submit */}
+              {/* Submit Button */}
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
@@ -168,33 +152,26 @@ const Contact: React.FC = () => {
                   </div>
                 ) : (
                   <>
-                    <FiSend className="w-4 h-4 mr-2" />
-                    Send Message
+                    <FiSend className="w-4 h-4 mr-2" /> Send Message
                   </>
                 )}
               </motion.button>
             </form>
           </motion.div>
 
-          {/* Contact Information */}
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            {/* Contact Info Cards */}
+          {/* Contact Info + Socials */}
+          <motion.div className="space-y-8" initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
+            {/* Contact Info */}
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h3>
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((info, i) => (
                 <motion.a
                   key={info.label}
                   href={info.href}
                   className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02 }}
                 >
@@ -207,13 +184,10 @@ const Contact: React.FC = () => {
                   </div>
                 </motion.a>
               ))}
-            </div>
 
-            {/* Social Links */}
-            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Connect With Me</h3>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
+              {/* Social Links */}
+              <div className="mt-6 flex space-x-4">
+                {socialLinks.map((social, i) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
@@ -222,7 +196,7 @@ const Contact: React.FC = () => {
                     className={`flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg text-gray-600 dark:text-gray-400 ${social.color} transition-all duration-300`}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -232,9 +206,6 @@ const Contact: React.FC = () => {
                   </motion.a>
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-gray-300 mt-6 text-sm">
-                Feel free to reach out through any of these platforms. I typically respond within 24 hours!
-              </p>
             </div>
           </motion.div>
         </div>

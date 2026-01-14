@@ -1,147 +1,87 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiCalendar, FiCode } from 'react-icons/fi';
+import React from "react";
+import { motion } from "framer-motion";
+import { FiGithub, FiExternalLink, FiCalendar, FiCode } from "react-icons/fi";
 
-const Projects = () => {
+const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'Free Fire Tournament Website',
+      title: "Free Fire Tournament Website",
       description:
-        'A dynamic and engaging Free Fire tournament platform featuring smooth UI, responsive layout, player information section, and easy registration with real-time updates.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Modern UI'],
-      date: 'Nov 2025',
+        "A dynamic Free Fire tournament platform with smooth UI and responsive design.",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      date: "2025",
       features: [
-        'Tournament registration system',
-        'Responsive and mobile-friendly layout',
-        'Clean and modern gaming UI',
-        'Player information & match details',
-        'Fast loading and optimized performance'
+        "Tournament registration system",
+        "Responsive layout",
+        "Modern gaming UI",
       ],
-      link: 'https://free-fire-tournament-registration-w.vercel.app/',
-      repo: 'https://github.com/Anoop9725/Free-Fire-tournament-registration-website',
-      image: '/freefire.jpg'
+      link: "",
+      repo: "",
+      image: "/freefire.jpg",
     },
     {
-      title: 'Radhe – Web-Based Virtual Assistant',
+      title: "Radhe – Virtual Assistant",
       description:
-        'An intelligent web-based virtual assistant built with modern web technologies, featuring voice recognition, natural language processing, and interactive responses.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'Web APIs', 'Speech Recognition'],
-      date: '2024',
+        "Web-based virtual assistant using speech recognition and web APIs.",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      date: "2024",
       features: [
-        'Voice command recognition',
-        'Interactive user interface',
-        'Real-time responses',
-        'Modern design patterns'
+        "Voice commands",
+        "Interactive UI",
+        "Real-time responses",
       ],
-      link: 'https://radhe-a-web-based-virtual-assistant.vercel.app/',
-      repo: 'https://github.com/Anoop9725/Radhe-A-Web-Based-Virtual-Assistant',
+      link: "",
+      repo: "",
       image:
-        'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800'
+        "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
     },
-    {
-      title: 'Rock Paper Scissor Game',
-      description:
-        'Interactive web-based game with sleek animations, score tracking, and responsive design.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'DOM Manipulation'],
-      date: '2024',
-      features: [
-        'Score tracking system',
-        'Smooth animations',
-        'Responsive design',
-        'Interactive gameplay'
-      ],
-      link: 'https://rock-paper2.netlify.app/',
-      repo: 'https://github.com/Anoop9725/Project2--Rock-Paper-Scissors.git',
-      image:
-        'https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      title: 'Animated Landing Page',
-      description:
-        'Dynamic landing page showcasing GSAP animations, smooth scrolling effects, and modern UI.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'ScrollTrigger'],
-      date: '2023',
-      features: [
-        'Advanced GSAP animations',
-        'Smooth scroll effects',
-        'Timeline animations',
-        'Performance optimized'
-      ],
-      link: '',        // 🔹 safe empty link
-      repo: '',        // 🔹 safe empty repo
-      image:
-        'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      title: 'Fully Responsive Website',
-      description:
-        'Modern responsive website with mobile-first design and animated hamburger menu.',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'CSS Grid'],
-      date: '2023',
-      features: [
-        'Mobile-first approach',
-        'Animated hamburger menu',
-        'Cross-browser compatibility',
-        'SEO optimized'
-      ],
-      link: 'https://fully-responsive-website-three.vercel.app/',
-      repo: 'https://github.com/Anoop9725/Fully-Responsive-Website.git',
-      image:
-        'https://images.pexels.com/photos/326513/pexels-photo-326513.jpeg?auto=compress&cs=tinysrgb&w=800'
-    }
   ];
 
-  const hasUrl = (url) => typeof url === 'string' && url.trim().length > 0;
+  const hasUrl = (url?: string) => !!url && url.trim() !== "";
 
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Heading */}
+        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured Projects
+            Projects
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-gray-600 dark:text-gray-300">
             Some of my recent work
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.article
-              key={`${project.title}-${index}`}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+              key={project.title}
+              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              {/* Image */}
-              <div className="relative h-48">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
 
-                <span className="absolute top-4 right-4 px-3 py-1 bg-white/90 dark:bg-gray-900/90 rounded-full text-sm flex items-center gap-1">
-                  <FiCalendar size={14} />
-                  {project.date}
-                </span>
-              </div>
-
-              {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  {project.title}
-                </h3>
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    {project.title}
+                  </h3>
+                  <span className="text-sm text-gray-500 flex items-center">
+                    <FiCalendar className="mr-1" /> {project.date}
+                  </span>
+                </div>
 
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {project.description}
@@ -152,7 +92,7 @@ const Projects = () => {
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-sm rounded-full"
+                      className="px-3 py-1 text-sm rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200"
                     >
                       {tech}
                     </span>
@@ -160,6 +100,39 @@ const Projects = () => {
                 </div>
 
                 {/* Features */}
-                <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1 mb-6">
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-600 dark:text-gray-300 mb-4">
                   {project.features.map((feature, i) => (
-                    <li key={i} className="flex items-center">
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+
+                {/* Actions */}
+                <div className="flex gap-3">
+                  <a
+                    href={hasUrl(project.repo) ? project.repo : "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm"
+                  >
+                    <FiGithub /> Code
+                  </a>
+
+                  <a
+                    href={hasUrl(project.link) ? project.link : "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 border rounded-lg text-sm"
+                  >
+                    <FiExternalLink /> Demo
+                  </a>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

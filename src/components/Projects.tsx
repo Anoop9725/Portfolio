@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
         "Responsive design",
         "Interactive gameplay",
       ],
-      link: "",
+      link: "https://project2-rock-paper-scissors.vercel.app/",
       repo: "https://github.com/Anoop9725/Project2--Rock-Paper-Scissors",
       image:
         "https://images.pexels.com/photos/1040157/pexels-photo-1040157.jpeg",
